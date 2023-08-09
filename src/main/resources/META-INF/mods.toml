@@ -15,7 +15,7 @@ license="${mod_license}"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="${mod_id}" #mandatory
+modId="abtopia" #mandatory
 # The version number of the mod
 version="${mod_version}" #mandatory
 # A display name for the mod
@@ -60,6 +60,18 @@ description='''${mod_description}'''
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="aberrance"
+    mandatory=true
+    versionRange="[0.4.1-1.20.1,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="croptopia"
+    mandatory=true
+    versionRange="[1.20-FORGE-2.3.0,)"
     ordering="NONE"
     side="BOTH"
 
