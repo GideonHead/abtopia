@@ -1,8 +1,6 @@
 package com.zepsun.abtopia.datagen;
 
-
-
-import com.zepsun.abtopia.datagen.recipebuilders.SeedMakerRecipeBuilder;
+import com.zepsun.aberrance.datagen.custom.SeedMakingRecipeBuilder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -19,7 +17,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-        new SeedMakerRecipeBuilder(Items.CARROT, Items.WHEAT_SEEDS, 2)
+        new SeedMakingRecipeBuilder(Items.CARROT, Items.WHEAT_SEEDS, 2)
                 .unlockedBy("has_wheat", has(Items.WHEAT)).save(pWriter);
 
     }
